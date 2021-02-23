@@ -1,18 +1,33 @@
 
 exports.min = function min (array) {
-  let minNum = (a, b) => {
-    return a < b ? a : b;
+  if (array.length > 0 || undefined){
+    let minNum = (a, b) => {
+      return a < b ? a : b;
+    }
+    return array.reduce(minNum);
   }
-  return array.reduce(minNum);
+  else {
+    return 0;
+  }
 }
 
 exports.max = function max (array) {
-  let maxNum = (a, b) => {
-    return a > b ? a : b;
+  if (array.length > 0 || undefined){
+    let maxNum = (a, b) => {
+     return a > b ? a : b;
+    }
+    return array.reduce(maxNum);
   }
-  return array.reduce(maxNum);
+  else {
+    return 0;
+  }
 }
 
 exports.avg = function avg (array) {
-  return array.reduce((a, b) => (a+b)) / array.length;
+  if (array.length > 0 || undefined){
+    return array.reduce((a, b) => (a+b)) / array.length;
+  }
+  else {
+    return 0;
+  }
 }
