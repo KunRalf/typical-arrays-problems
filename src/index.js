@@ -14,8 +14,5 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  let argNum = (a, b) => {
-    return array.reduce(a + b);
-  }
-  return argNum / array.length
+  return array.reduce((a, b) => (a+b)) / array.length;
 }
