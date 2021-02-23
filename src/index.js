@@ -1,12 +1,21 @@
 
 exports.min = function min (array) {
-  return 0;
+  let minNum = (a, b) => {
+    return a < b ? a : b;
+  }
+  return array.reduce(minNum);
 }
 
 exports.max = function max (array) {
-  return 0;
+  let maxNum = (a, b) => {
+    return a > b ? a : b;
+  }
+  return array.reduce(maxNum);
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  let argNum = (a, b) => {
+    return array.reduce(a + b);
+  }
+  return argNum / array.length
 }
